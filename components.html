@@ -15,10 +15,18 @@
     return <h1>Hi, welcome to the party {props.name}</h1>;
   }
 
-  const welcomeBilly = <Welcome name="Billy" />;
+  function WelcomeEveryone () {
+    return (
+      <div>
+        <Welcome name="Billy" />
+        <Welcome name="Mike" />
+        <Welcome name="Frank" />
+      </div>
+    )
+  }
 
   ReactDOM.render(
-    welcomeBilly,
+    <WelcomeEveryone />,
     document.getElementById('root')
   );
 
