@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>React Sketchbook: Template</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+  function SayHello (props) {
+    return (
+      <h1>Hello {props.firstName} {props.lastName}</h1>
+    )
+  }
+
+  SayHello.propTypes = {
+    firstName(props, propName, componentName) {
+      if (typeof props[propName] !== 'string') {
+        return new Error(`Please pass a string for ${propName} in ${componentName} instead of ${typeof props[propName]}`)
+      }
+    }
+  }
+
+  const element = <SayHello firstName={true} lastName="malk" />;
+
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+
+  </script>
+</body>
+</html>
