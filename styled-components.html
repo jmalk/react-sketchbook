@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>React Sketchbook: Template</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <style>
+  .box {
+    border: 1px solid black;
+  }
+
+  .box--small {
+    width: 60px;
+    height: 60px;
+  }
+
+  .box--medium {
+    width: 120px;
+    height: 120px;
+  }
+
+  .box--large {
+    width: 180px;
+    height: 180px;
+  }
+  </style>
+
+  <script type="text/babel">
+  function Box ({style, size, className = '', ...rest}) {
+    const sizeClassName = size ? `box--${size}` : '';
+    return (
+      <div
+        className = {`box ${className} ${sizeClassName}`}
+        style = {{ paddingLeft: 20, ...style }}
+        {...rest}
+      />
+    );
+  }
+
+  const element = (
+    <div>
+      <Box
+        size="small"
+        style={{backgroundColor: 'yellow'}}
+      >
+        Small box
+      </Box>
+
+      <Box
+        size="medium"
+        style={{backgroundColor: 'aqua'}}
+      >
+        In-betweeny box
+      </Box>
+
+      <Box
+        size="large"
+        style={{backgroundColor: 'fuchsia'}}
+      >
+        BIG BOX
+      </Box>
+    </div>
+  );
+
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+  </script>
+</body>
+</html>
