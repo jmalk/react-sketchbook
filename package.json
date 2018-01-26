@@ -1,0 +1,22 @@
+{
+  "name": "react-sketchbook",
+  "version": "1.0.0",
+  "description": "Things made following tutorials, and other doodles, in React JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmalk/react-sketchbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmalk/react-sketchbook/issues"
+  },
+  "homepage": "https://github.com/jmalk/react-sketchbook#readme",
+  "devDependencies": {
+    "create-react-app": "^1.5.1"
+  }
+}
