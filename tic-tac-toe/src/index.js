@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Square extends React.Component {
-  render() {
+  render () {
     return (
       <button
         className="square"
@@ -16,11 +16,11 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
-  renderSquare(i) {
+  renderSquare (i) {
     return <Square value={i}/>;
   }
 
-  render() {
+  render () {
     const status = 'Next player: X';
 
     return (
@@ -47,7 +47,7 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
-  render() {
+  render () {
     return (
       <div className="game">
         <div className="game-board">
